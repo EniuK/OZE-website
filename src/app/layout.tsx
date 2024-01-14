@@ -13,6 +13,7 @@ import Realizations from "./pages/Realizations";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
+  // comment to push changes
 
   const renderContent = () => {
     switch (pathname) {

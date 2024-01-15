@@ -7,21 +7,21 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import HomePage from "./pages/HomePage";
 import HomeMeta from "./MetaData";
+import Home from "./page";
 import NotFound from "./pages/NotFound";
 import { usePathname } from "next/navigation";
 import Realizations from "./pages/Realizations";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
-  // comment to push changes
 
   const renderContent = () => {
     switch (pathname) {
-      case "/contact":
+      case "/Kontakt":
         return <Contact />;
-      case "/services":
+      case "/Serwis":
         return <Services />;
-      case "/Realizations":
+      case "/Realizacje":
         return <Realizations />;
       case "/" || "/Home":
         return <HomePage />;

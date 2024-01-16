@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomeMeta from "./MetaData";
 import { usePathname } from "next/navigation";
+import { Box } from "@mui/material";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const renderContent = useRenderContent();
@@ -19,9 +20,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       </head>
       <ThemeRegistry>
         <body>
-          <Header path={pathname} />
-          <HomeMeta>{renderContent || children}</HomeMeta>
-          <Footer />
+          <Box style={{ maxWidth: "1440px" }}>
+            <Header path={pathname} />
+            <HomeMeta>{renderContent || children}</HomeMeta>
+            <Footer path={pathname} />
+          </Box>
         </body>
       </ThemeRegistry>
     </html>

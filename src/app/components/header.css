@@ -18,5 +18,8 @@
     line-height: 21.29px;
     font-size: 18px;
     letter-spacing: 5%;
-
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
 }

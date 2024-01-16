@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import "./header.css";
-const Header = () => {
+const Header = ({ path }: any) => {
+  console.log(path);
   return (
     <Box className={"header-container"}>
       <Box className={"logo-container"}>
@@ -12,25 +13,87 @@ const Header = () => {
         </Link>
       </Box>
       <Box className={"header-menu-items"}>
-        <Link
-          href={"/Serwis"}
-          style={{ textDecoration: "none", color: "black" }}
-        >
-          <Box className={"menu-item"}>USŁUGI</Box>
-        </Link>
-        <Link
-          href={"/Realizacje"}
-          style={{ textDecoration: "none", color: "black" }}
-        >
-          <Box className={"menu-item"}>REALIZACJE</Box>
-        </Link>
-
-        <Link
-          href={"/Kontakt"}
-          style={{ textDecoration: "none", color: "black" }}
-        >
-          <Box className={"menu-item"}>KONTAKT</Box>
-        </Link>
+        <Box className={"menu-item"}>
+          <Link
+            href={"/Serwis"}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            USŁUGI
+          </Link>
+          {path === "/Serwis" ? (
+            <Box
+              style={{
+                backgroundColor: "#34A803",
+                width: "5px",
+                height: "5px",
+                marginTop: "10px",
+                borderRadius: "50%",
+              }}
+            />
+          ) : (
+            <Box
+              style={{
+                width: "5px",
+                height: "5px",
+                marginTop: "10px",
+              }}
+            />
+          )}
+        </Box>
+        <Box className={"menu-item"}>
+          <Link
+            href={"/Realizacje"}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            REALIZACJE
+          </Link>
+          {path === "/Realizacje" ? (
+            <Box
+              style={{
+                backgroundColor: "#34A803",
+                width: "5px",
+                height: "5px",
+                marginTop: "10px",
+                borderRadius: "50%",
+              }}
+            />
+          ) : (
+            <Box
+              style={{
+                width: "5px",
+                height: "5px",
+                marginTop: "10px",
+              }}
+            />
+          )}
+        </Box>
+        <Box className={"menu-item"}>
+          <Link
+            href={"/Kontakt"}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            KONTAKT
+          </Link>
+          {path === "/Kontakt" ? (
+            <Box
+              style={{
+                backgroundColor: "#34A803",
+                width: "5px",
+                height: "5px",
+                marginTop: "10px",
+                borderRadius: "50%",
+              }}
+            />
+          ) : (
+            <Box
+              style={{
+                width: "5px",
+                height: "5px",
+                marginTop: "10px",
+              }}
+            />
+          )}
+        </Box>
       </Box>
     </Box>
   );

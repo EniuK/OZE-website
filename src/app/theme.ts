@@ -1,13 +1,24 @@
-import { Roboto } from "next/font/google";
+import { Roboto, Jura } from "next/font/google";
+
 import { createTheme } from "@mui/material/styles";
 
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
+// import "@fontsource/roboto/300.css";
+// import "@fontsource/roboto/400.css";
+// import "@fontsource/roboto/500.css";
+// import "@fontsource/roboto/700.css";
+import "@fontsource/jura/300.css";
+import "@fontsource/jura/400.css";
+import "@fontsource/jura/500.css";
+import "@fontsource/jura/700.css";
 import { Colors } from "./colors";
 
 const roboto = Roboto({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const jura = Jura({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
@@ -25,7 +36,7 @@ export const theme = createTheme({
     mode: "light",
   },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: jura.style.fontFamily,
   },
 
   // components: {

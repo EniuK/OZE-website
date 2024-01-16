@@ -4,10 +4,19 @@
     align-items: center;
     flex-direction: row;
     width: 100%;
+   padding: 50px 0 50px 50px;
 }
 
-.menu-items {
+.header-menu-items {
     display: flex;
     flex-direction: row;
     
+}
+
+.menu-item {
+    margin-right: 50px;
+    line-height: 21.29px;
+    font-size: 18px;
+    letter-spacing: 5%;
+
 }

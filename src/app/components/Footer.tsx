@@ -88,26 +88,35 @@ const Footer = ({ path }: any) => {
       <Box className={"footer-menu"}>
         <FooterLinks pathLinks={path} />
         <Box className={"footer-underlinks"}>
-          <Box>Polityka prywatności RODO</Box>
-          <Box className={"footer-social-links"}>
-            {socialLinks.map((e: SocialLinks) => {
-              return (
-                <Box
-                  key={e.name}
-                  style={{ display: "flex", flexDirection: "row" }}
-                >
-                  <Box>
-                    <Image
-                      src={e.icon}
-                      width={e.width}
-                      height={e.height}
-                      alt={e.name}
-                    ></Image>
+          <Box style={{ width: "50%" }}>Polityka prywatności RODO</Box>
+          <Box className={"footer-social-links"} style={{ width: "50%" }}>
+            <Box
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                justifyContent: "center",
+              }}
+            >
+              {socialLinks.map((e: SocialLinks) => {
+                return (
+                  <Box
+                    key={e.name}
+                    style={{ display: "flex", flexDirection: "row" }}
+                  >
+                    <Box>
+                      <Image
+                        src={e.icon}
+                        width={e.width}
+                        height={e.height}
+                        alt={e.name}
+                      ></Image>
+                    </Box>
+                    <Box style={{ marginLeft: "15px" }}>{e.name}</Box>
                   </Box>
-                  <Box>{e.name}</Box>
-                </Box>
-              );
-            })}
+                );
+              })}
+            </Box>
           </Box>
         </Box>
       </Box>

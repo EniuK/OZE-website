@@ -53,3 +53,10 @@ margin-bottom: 50px;
     justify-content: space-between;
     align-items: center;
 }
+
+.footer-social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

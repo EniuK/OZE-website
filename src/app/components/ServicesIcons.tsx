@@ -40,28 +40,38 @@ const icons = [
 ];
 const ServicesIcons = () => {
   return (
-    <Box>
+    <Box
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        width: "100%",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Box
         style={{
           display: "flex",
           flexDirection: "row",
-          width: "100%",
+          width: "80%",
           justifyContent: "space-evenly",
           alignItems: "center",
         }}
       >
         {icons.map((e) => {
           return (
-            <Box key={e.text}>
-              <Box style={{ width: "100px", height: "100px" }}>
-                <Image
-                  src={e.imgsrc}
-                  alt={e.text}
-                  width={e.width}
-                  height={e.height}
-                />
+            <Box key={e.text} style={{ width: "152px", height: "131px" }}>
+              <Box
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Image src={e.imgsrc} alt={e.text} width={100} height={100} />
               </Box>
-              <Box>{e.text}</Box>
+              <Box style={{ width: "100%", textAlign: "center" }}>{e.text}</Box>
             </Box>
           );
         })}

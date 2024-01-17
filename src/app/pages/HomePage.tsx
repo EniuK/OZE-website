@@ -5,7 +5,7 @@ import AboutUs from "../homepage_components/AboutUs";
 import ServicesHomePage from "../homepage_components/Services";
 import Offers from "../homepage_components/Offers";
 import Qualifications from "../homepage_components/Qualifications";
-
+import "./homepage.css";
 export const metadata: Metadata = {
   title: "Technika OZE",
   description: "Technika OZE to usługi specjalizujące się w ...",

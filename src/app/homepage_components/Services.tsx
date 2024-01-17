@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import ServicesIcons from "../components/ServicesIcons";
+import "./services.css";
 const ServicesHomePage = () => {
   return (
     <Box className={"services-container"}>

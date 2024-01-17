@@ -1,0 +1,30 @@
+.aboutus-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutus-text-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutus-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42.59px;
+    letter-spacing: 18%;
+}
+
+.sub{ 
+    font-family: "Zilla Slab";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 20px;
+}

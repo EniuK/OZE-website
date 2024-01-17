@@ -1,0 +1,19 @@
+.offers-container {
+    width: 100%;
+    margin-top: 50px;
+}
+.offers-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42.59px;
+    letter-spacing: 18%;
+    padding-left: 13%;
+}
+
+.offers-map-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 10%;
+}

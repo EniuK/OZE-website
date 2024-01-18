@@ -56,7 +56,7 @@ const Offers = () => {
               <Box>
                 <Image src={e.url} width={301} height={301} alt={e.name} />
               </Box>
-              <Box style={{ wdith: "100%", textAlign: "center" }}>{e.name}</Box>
+              <Box style={{ width: "100%", textAlign: "center" }}>{e.name}</Box>
             </Box>
           );
         })}

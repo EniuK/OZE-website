@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import ContactIntroduction from "../contact_components/ContactIntroduction";
 import ContactForm from "../contact_components/ContactForm";
 import ContactMap from "../contact_components/ContactMap";
+import "./contact.css";
 const Contact = () => {
   return (
     <Box className={"contact-container"}>

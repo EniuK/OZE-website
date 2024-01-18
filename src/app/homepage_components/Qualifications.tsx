@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import Image from "next/image";
-
+import "./qualifications.css";
 type qualification = {
   name: string;
 };
@@ -50,34 +50,36 @@ const qualificaions: qualification[] = [
 ];
 const Qualifications = () => {
   return (
-    <Box>
-      <Box>KWALIFIKACJE</Box>
-      <Box>
+    <Box className={"qualif-container"}>
+      <Box className={"qualif-title"}>KWALIFIKACJE</Box>
+      <Box className={"qualif-subtitle"}>
         Dysponujemy licznymi kwalifikacjami, które są gwarancją wysokiej jakości
-        świadczonych usług. Jesteśmy w stanie dostosować się do różnorodnych
-        potrzeb klientów, zapewniając kompleksową obsługę, która obejmuje
-        aspekty techniczne, projektowe i eksploatacyjne. Lista naszych
-        uprawnień:
+        świadczonych usług. Jesteśmy w stanie dostosować się do <br />{" "}
+        różnorodnych potrzeb klientów, zapewniając kompleksową obsługę, która
+        obejmuje aspekty techniczne, projektowe i eksploatacyjne. <br /> Lista
+        naszych uprawnień:
       </Box>
       <Box>
-        <Box>
+        <Box className={"qualif-map-container"}>
           {qualificaions.map((e: qualification) => {
             return (
-              <Box key={e.name}>
-                <Box>
-                  {/* icon */}
-                  <Box>
-                    <Image
-                      src={"/shiled.svg"}
-                      width={40}
-                      height={40}
-                      alt={"shiled"}
-                    ></Image>
+              <Box key={e.name} className={"qualif-item-container"}>
+                <Box className={"qualif-shadow-box-container"}>
+                  <Box className={"qualif-shadow-box"}>
+                    {/* icon */}
+                    <Box>
+                      <Image
+                        src={"/shiled.svg"}
+                        width={40}
+                        height={40}
+                        alt={"shiled"}
+                      />
+                    </Box>
+                    {/* divider */}
+                    <Box className={"qualif-divider"} />
+                    {/* text */}
+                    <Box>{e.name}</Box>
                   </Box>
-                  {/* divider */}
-                  <Box />
-                  {/* text */}
-                  <Box>{e.name}</Box>
                 </Box>
               </Box>
             );

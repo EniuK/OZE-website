@@ -1,19 +1,26 @@
 import { Box, TextField, Button } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-interface ContactFormProps {
-  sendEmail: (formData: FormData) => void;
-}
+// import { render } from "@react-email/render";
+// import { Email } from "./email";
 
-interface FormData {
-  name: string;
-  email: string;
-  phoneNumber: string;
-  message: string;
-}
+// interface ContactFormProps {
+//   sendEmail: (formData: FormData) => void;
+// }
 
-const ContactForm = ({ sendEmail }: any) => {
+// interface FormData {
+//   name: string;
+//   email: string;
+//   phoneNumber: string;
+//   message: string;
+// }
+
+const ContactForm = () => {
+  const [messageSend, setMessageSend] = useState(false);
+  const sendEmail = (val: any) => {
+    console.log(val);
+  };
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -31,6 +38,8 @@ const ContactForm = ({ sendEmail }: any) => {
     }),
     onSubmit: (values) => {
       sendEmail(values);
+      setMessageSend(true);
+      console.log(messageSend);
     },
   });
   return (
@@ -88,6 +97,13 @@ const ContactForm = ({ sendEmail }: any) => {
           Wyślij maila
         </Button>
       </form>
+      <Box>
+        {messageSend && (
+          <Box style={{ color: "green", width: "100%", textAlign: "center" }}>
+            Wiadomosc wyslana!
+          </Box>
+        )}
+      </Box>
     </Box>
   );
 };

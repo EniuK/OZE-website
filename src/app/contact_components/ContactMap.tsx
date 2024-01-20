@@ -24,7 +24,6 @@ const ContactMap = () => {
           <Marker position={position} />
         </Map>
       </APIProvider>
-      test
     </Box>
   );
 };

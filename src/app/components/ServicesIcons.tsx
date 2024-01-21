@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 
 const icons = [
   {
@@ -7,38 +8,50 @@ const icons = [
     text: "PROJEKTOWANIE",
     width: 81.25,
     height: 73.48,
-    url: "",
+    url: "projektowanie",
   },
   {
     imgsrc: "/gear.svg",
     text: "REALIZACJA",
     width: 81.25,
     height: 73.48,
-    url: "",
+    url: "realizacja",
   },
   {
     imgsrc: "/eye.svg",
     text: "NADZÓR",
     width: 81.25,
     height: 73.48,
-    url: "",
+    url: "nadzor",
   },
   {
     imgsrc: "/tools.svg",
     text: "SERWIS",
     width: 81.25,
     height: 73.48,
-    url: "",
+    url: "serwis",
   },
   {
     imgsrc: "battery.svg",
     text: "POMIARY",
     width: 81.25,
     height: 73.48,
-    url: "",
+    url: "pomiary",
   },
 ];
 const ServicesIcons = () => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    // first prevent the default behavior
+    e.preventDefault();
+    // get the href and remove everything before the hash (#)
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    // get the element by id and use scrollIntoView
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <Box
       style={{
@@ -69,7 +82,9 @@ const ServicesIcons = () => {
                   alignItems: "center",
                 }}
               >
-                <Image src={e.imgsrc} alt={e.text} width={100} height={100} />
+                <Link href={`/Serwis#${e.url}`} onClick={handleScroll}>
+                  <Image src={e.imgsrc} alt={e.text} width={100} height={100} />
+                </Link>
               </Box>
               <Box style={{ width: "100%", textAlign: "center" }}>{e.text}</Box>
             </Box>

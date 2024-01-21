@@ -2,19 +2,6 @@ import { Box, TextField, Button } from "@mui/material";
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-// import { render } from "@react-email/render";
-// import { Email } from "./email";
-
-// interface ContactFormProps {
-//   sendEmail: (formData: FormData) => void;
-// }
-
-// interface FormData {
-//   name: string;
-//   email: string;
-//   phoneNumber: string;
-//   message: string;
-// }
 
 const ContactForm = () => {
   const [messageSend, setMessageSend] = useState(false);

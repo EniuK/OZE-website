@@ -9,7 +9,7 @@ const qualificaions: qualification[] = [
     name: "FGAZ Personalne",
   },
   {
-    name: "FGAZ Personalne",
+    name: "FGAZ Personalne1",
   },
   {
     name: "SEP GR I E",
@@ -45,7 +45,7 @@ const qualificaions: qualification[] = [
     name: "Budowlane do projektowania w specjalności instalacyjnej w zakresie sieci, instalacji i urządzeń cieplnych, wentylacyjnych, gazowych, wodociągowych i kanalizacyjnych",
   },
   {
-    name: "Budowlane do projektowania w specjalności instalacyjnej w zakresie sieci, instalacji i urządzeń cieplnych, wentylacyjnych, gazowych, wodociągowych i kanalizacyjnych",
+    name: "Budowlane do projektowania w specjalności instalacyjnej w zakresie sieci, instalacji i urządzeń cieplnych, wentylacyjnych, gazowych, wodociągowych i kanalizacyjnych11",
   },
 ];
 const Qualifications = () => {

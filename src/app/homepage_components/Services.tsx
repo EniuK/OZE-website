@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import ServicesIcons from "../components/ServicesIcons";
 import "./services.css";
-const ServicesHomePage = () => {
+const ServicesHomePage = ({ home }: boolean) => {
   return (
     <Box className={"services-container"}>
       <Box className={"services-title"}>USŁUGI</Box>
@@ -13,7 +13,7 @@ const ServicesHomePage = () => {
         efektywne rozwiązania.
       </Box>
       <Box className={"services-icons-container"}>
-        <ServicesIcons />
+        <ServicesIcons isHomePage={home} />
       </Box>
     </Box>
   );

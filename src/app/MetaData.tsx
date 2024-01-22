@@ -6,5 +6,5 @@ export const metadata: Metadata = {
   description: "Technika OZE to usługi specjalizujące się w ...",
 };
 export default function HomeMeta({ children }: any) {
-  return <div className="didot">{children}</div>;
+  return <div>{children}</div>;
 }

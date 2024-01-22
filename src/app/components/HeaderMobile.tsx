@@ -2,18 +2,24 @@ import { Box } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
-import "./header.css";
+import "./headermobile.css";
 
-const Header = ({ path }: any) => {
+const HeaderMobile = ({ path }: any) => {
   return (
-    <Box className={"header-container"}>
-      <Box className={"logo-container"}>
+    <Box className={"header-mobile-container"}>
+      <Box className={"logo-mobile-container"}>
         <Link href={"/"}>
-          <Image src={"/logo_oze.png"} alt={"logo"} width={304} height={40} />
+          <Image
+            src={"/logo_oze.png"}
+            alt={"logo"}
+            width={194.05}
+            height={25}
+          />
         </Link>
       </Box>
-      <Box className={"header-menu-items"}>
-        <Box className={"menu-item"}>
+      <Box className={"header-mobile-menu-items"}>
+        <Box>
+          {/* <Box className={"menu-mobile-item"}>
           <Link
             href={"/Serwis"}
             style={{ textDecoration: "none", color: "black" }}
@@ -39,8 +45,8 @@ const Header = ({ path }: any) => {
               }}
             />
           )}
-        </Box>
-        <Box className={"menu-item"}>
+        </Box> */}
+          {/* <Box className={"menu-mobile-item"}>
           <Link
             href={"/Realizacje"}
             style={{ textDecoration: "none", color: "black" }}
@@ -93,9 +99,10 @@ const Header = ({ path }: any) => {
               }}
             />
           )}
+        </Box> */}
         </Box>
       </Box>
     </Box>
   );
 };
-export default Header;
+export default HeaderMobile;

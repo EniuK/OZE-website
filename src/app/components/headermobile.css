@@ -1,0 +1,13 @@
+.header-mobile-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rebeccapurple;
+    width: 100vw;
+}
+
+.logo-mobile-container {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

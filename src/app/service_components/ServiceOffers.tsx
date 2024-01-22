@@ -13,7 +13,6 @@ const ServiceOffers = ({ offers }: Offer[]) => {
   return (
     <Box style={{ marginTop: "80px" }}>
       <Box>
-        <section id="kij"></section>
         {offers.map((e: any, idx: number) => {
           return (
             <div

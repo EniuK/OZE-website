@@ -39,12 +39,15 @@ const icons = [
     url: "pomiary",
   },
 ];
-const ServicesIcons = () => {
+const ServicesIcons = ({ isHomePage }: boolean) => {
+  console.log(isHomePage);
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     // first prevent the default behavior
     e.preventDefault();
     // get the href and remove everything before the hash (#)
+
     const href = e.currentTarget.href;
+    console.log(isHomePage);
     const targetId = href.replace(/.*\#/, "");
     // get the element by id and use scrollIntoView
     const elem = document.getElementById(targetId);
@@ -67,13 +70,15 @@ const ServicesIcons = () => {
           display: "flex",
           flexDirection: "row",
           width: "80%",
+
           justifyContent: "space-evenly",
           alignItems: "center",
+          overflow: "scorll",
         }}
       >
         {icons.map((e) => {
           return (
-            <Box key={e.text} style={{ width: "152px", height: "131px" }}>
+            <Box key={e.text + 1} style={{ width: "152px", height: "131px" }}>
               <Box
                 style={{
                   width: "100%",
@@ -82,7 +87,10 @@ const ServicesIcons = () => {
                   alignItems: "center",
                 }}
               >
-                <Link href={`/Serwis#${e.url}`} onClick={handleScroll}>
+                <Link
+                  href={isHomePage ? "/Serwis" : `/Serwis#${e.url}`}
+                  onClick={isHomePage ? () => console.log("hej") : handleScroll}
+                >
                   <Image src={e.imgsrc} alt={e.text} width={100} height={100} />
                 </Link>
               </Box>

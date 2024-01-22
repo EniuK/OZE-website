@@ -7,7 +7,7 @@ const AboutUs = () => {
     <Box className={"aboutus-container"}>
       <Box className={"aboutus-text-container"}>
         <Box className={"aboutus-title"}>O NAS</Box>
-        <Box>
+        <Box style={{ width: "100%" }}>
           <Box className={"aboutus-subtitle1 sub"}>
             To też tekst wygenerowany przez AI. Witamy w naszej firmie, gdzie
             inżynierska pasja łączy się z solidnym doświadczeniem, tworząc
@@ -30,7 +30,7 @@ const AboutUs = () => {
           </Box>
         </Box>
       </Box>
-      <Box>
+      <Box className={"aboutus-img-container"}>
         <Image src="/owners.png" alt="Owners" width={450} height={350} />
       </Box>
     </Box>

@@ -16,25 +16,34 @@ const PhotoSlider = () => {
 
   return (
     <Box className={"homepage-slider-container"}>
-      {images.map((image, index) => (
-        <Box
-          key={index}
-          style={{
-            position: "absolute",
-            height: "600px",
-            width: "100%",
-            backgroundImage: `url(${image})`,
-            backgroundSize: "cover",
-            opacity: currentImage === index ? 1 : 0,
-            transition: `opacity ${transitionTime / 1000}s ease-in-out`,
-            zIndex: 1,
-          }}
-        />
-      ))}
       <Box
         style={{
-          width: "100%",
-          height: "100%",
+          width: "100vw",
+          height: "600px",
+          position: "absolute",
+          backgroundColor: "red",
+        }}
+      >
+        {images.map((image, index) => (
+          <Box
+            key={index}
+            style={{
+              position: "absolute",
+              height: "600px",
+              minWidth: "100vw",
+
+              backgroundImage: `url(${image})`,
+              backgroundSize: "cover",
+              opacity: currentImage === index ? 1 : 0,
+              transition: `opacity ${transitionTime / 1000}s ease-in-out`,
+              zIndex: 1,
+            }}
+          />
+        ))}
+      </Box>
+
+      <Box
+        style={{
           zIndex: "3",
           position: "absolute",
           display: "flex",
@@ -54,6 +63,7 @@ const PhotoSlider = () => {
             height: "600px",
             zIndex: "2",
             paddingRight: "10%",
+
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -66,8 +76,6 @@ const PhotoSlider = () => {
           instalacji wodno-kanalizacyjnych, gazowych, grzewczych.
         </Box>
       </Box>
-
-      {/* </Box> */}
     </Box>
   );
 };

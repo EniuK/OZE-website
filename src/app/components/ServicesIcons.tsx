@@ -60,7 +60,7 @@ const ServicesIcons = ({ isHomePage }: boolean) => {
       style={{
         display: "flex",
         flexDirection: "row",
-        width: "100%",
+        // width: "100%",
         justifyContent: "center",
         alignItems: "center",
       }}
@@ -69,11 +69,10 @@ const ServicesIcons = ({ isHomePage }: boolean) => {
         style={{
           display: "flex",
           flexDirection: "row",
-          width: "80%",
 
           justifyContent: "space-evenly",
           alignItems: "center",
-          overflow: "scorll",
+          overflow: "scroll",
         }}
       >
         {icons.map((e) => {

@@ -18,10 +18,9 @@ const PhotoSlider = () => {
     <Box className={"homepage-slider-container"}>
       <Box
         style={{
-          width: "100vw",
+          width: "100%",
           height: "600px",
           position: "absolute",
-          backgroundColor: "red",
         }}
       >
         {images.map((image, index) => (

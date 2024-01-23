@@ -1,8 +1,9 @@
 .header-mobile-container {
     display: flex;
     justify-content: space-between;
-    background-color: rebeccapurple;
+
     width: 100vw;
+    padding: 20px 0;
 }
 
 .logo-mobile-container {

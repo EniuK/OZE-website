@@ -18,17 +18,15 @@ const HomePage = () => {
   const isHomepage = pathname === "/" ? true : false;
   return (
     <Box className={"homepage-container"}>
-      <PhotoSlider />
+      {/* <PhotoSlider /> */}
 
-      <AboutUs />
+      {/* <AboutUs /> */}
 
-      <ServicesHomePage home={isHomepage} />
+      {/* <ServicesHomePage home={isHomepage} /> */}
 
       <Offers />
 
-      <Box className={"homepage-kwalifikacje"}>
-        <Qualifications />
-      </Box>
+      {/* <Qualifications /> */}
     </Box>
   );
 };

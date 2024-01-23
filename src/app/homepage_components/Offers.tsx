@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import "./offers.css";
 type Image = {
@@ -46,6 +46,8 @@ const images: Image[] = [
 ];
 
 const Offers = () => {
+  const isMobileView = useMediaQuery("(max-width:900px)");
+
   return (
     <Box className={"offers-container"}>
       <Box className={"offers-title"}>Oferta</Box>
@@ -54,7 +56,12 @@ const Offers = () => {
           return (
             <Box key={e.name} style={{ padding: "30px" }}>
               <Box>
-                <Image src={e.url} width={301} height={301} alt={e.name} />
+                <Image
+                  src={e.url}
+                  width={isMobileView ? 140 : 301}
+                  height={isMobileView ? 140 : 301}
+                  alt={e.name}
+                />
               </Box>
               <Box style={{ width: "100%", textAlign: "center" }}>{e.name}</Box>
             </Box>

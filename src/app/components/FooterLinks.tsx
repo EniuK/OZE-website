@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
+import "./footerlinks.css";
 
 const FooterLinks = ({ pathLinks }: any) => {
   return (

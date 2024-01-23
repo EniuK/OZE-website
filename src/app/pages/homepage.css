@@ -1,7 +1,15 @@
 .homepage-container {
     width: 100%;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width:762px) {
+    .homepage-container {
+        min-width: 375px;
+        background-color: bisque;
+    }
+  }

@@ -29,7 +29,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             alignItems: "center",
             flexDirection: "column",
             width: "100vw",
-            // marginLeft: "5%",
+            overflowX: "clip",
           }}
         >
           {isMobileView ? (
@@ -37,16 +37,19 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           ) : (
             <Header path={pathname} />
           )}
-          <Box
-            style={{
-              display: "flex",
-              maxWidth: "1440px",
-              // justifyContent: "center",
-              alignItems: "center",
-              flexDirection: "column",
-            }}
-          >
-            <HomeMeta>{renderContent || children}</HomeMeta>
+          <Box style={{ width: "100vw" }}>
+            <Box
+              style={{
+                display: "flex",
+                maxWidth: "1440px",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+            >
+              {/* <HomeMeta></HomeMeta> */}
+              {renderContent || children}
+            </Box>
           </Box>
           <Footer path={pathname} />
         </body>

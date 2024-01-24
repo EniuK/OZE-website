@@ -1,9 +1,12 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import "./aboutus.css";
 
 const AboutUs = () => {
+  const isMobileView = useMediaQuery("(max-width:900px)");
+
   return (
+    //
     <Box className={"aboutus-container"}>
       <Box className={"aboutus-text-container"}>
         <Box className={"aboutus-title"}>O NAS</Box>
@@ -31,7 +34,12 @@ const AboutUs = () => {
         </Box>
       </Box>
       <Box className={"aboutus-img-container"}>
-        <Image src="/owners.png" alt="Owners" width={450} height={350} />
+        <Image
+          src="/owners.png"
+          alt="Owners"
+          width={isMobileView ? 300 : 450}
+          height={isMobileView ? 233.33 : 350}
+        />
       </Box>
     </Box>
   );

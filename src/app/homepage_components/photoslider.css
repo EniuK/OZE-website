@@ -3,3 +3,11 @@
     height: 600px;
   
 }
+
+@media  (max-width: 900px) {
+    .homepage-slider-container {
+      
+        height: 133.33px;
+      margin-bottom: 70px;
+    }
+}

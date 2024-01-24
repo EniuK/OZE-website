@@ -40,3 +40,28 @@ align-items: center;
     max-width: 490px;
 
 }
+
+@media  (max-width: 900px) {
+  .aboutus-title {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .sub {
+    width: 100%;
+    max-width: 90%;
+    font-size: 14px;
+  }
+  .aboutus-container {
+    width: 100%;
+  
+    padding-left: 1em;
+}
+
+.aboutus-img-container {
+    margin-top: 30px;
+}
+
+}

@@ -20,7 +20,7 @@ const HomePage = () => {
     <Box className={"homepage-container"}>
       <PhotoSlider />
 
-      {/* <AboutUs /> */}
+      <AboutUs />
 
       {/* <ServicesHomePage home={isHomepage} /> */}
 

@@ -1,7 +1,9 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import ServicesIcons from "../components/ServicesIcons";
 import "./services.css";
 const ServicesHomePage = ({ home }: boolean) => {
+  const isMobileView = useMediaQuery("(max-width:900px)");
+
   return (
     <Box className={"services-container"}>
       <Box className={"services-title"}>USŁUGI</Box>
@@ -12,6 +14,12 @@ const ServicesHomePage = ({ home }: boolean) => {
         profesjonalizm i zaangażowanie przekształcą Twoje potrzeby w solidne i
         efektywne rozwiązania.
       </Box>
+      {isMobileView && (
+        <Box style={{ width: "100%", padding: "0 10px", textAlign: "center" }}>
+          Aby poznać szczegóły, kliknij w konkretną usługę:
+        </Box>
+      )}
+
       <Box className={"services-icons-container"}>
         <ServicesIcons isHomePage={home} />
       </Box>

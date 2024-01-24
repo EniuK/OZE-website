@@ -18,3 +18,23 @@
     text-align: center;
     margin-bottom: 40px;
 }
+
+.services-container {
+    max-width: 100%;
+   
+}
+
+@media (max-width: 900px) {
+    .services-container {
+        overflow: scroll;
+       
+    }
+
+    .services-title {
+        margin-top: 80px;
+    }
+
+    .services-subtitle {
+        padding: 0 10px;
+    }
+}

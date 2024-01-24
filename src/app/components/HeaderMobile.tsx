@@ -57,7 +57,7 @@ const HeaderMobile = ({ path }: any) => {
           >
             <div
               style={{
-                width: "20px",
+                width: "27px",
                 height: "3px",
                 backgroundColor: "black",
                 marginTop: "5px",
@@ -66,7 +66,7 @@ const HeaderMobile = ({ path }: any) => {
             ></div>
             <div
               style={{
-                width: "20px",
+                width: "27px",
                 height: "3px",
                 backgroundColor: "black",
                 marginTop: "5px",
@@ -76,7 +76,7 @@ const HeaderMobile = ({ path }: any) => {
             ></div>
             <div
               style={{
-                width: "20px",
+                width: "27px",
                 height: "3px",
                 backgroundColor: "black",
                 marginTop: "5px",
@@ -91,9 +91,10 @@ const HeaderMobile = ({ path }: any) => {
             className="menu-links"
             style={{
               position: "absolute",
-              top: "160px",
+              top: "0px",
               left: "0",
               right: "0",
+
               backgroundColor: "white",
               zIndex: 1,
               boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
@@ -101,7 +102,8 @@ const HeaderMobile = ({ path }: any) => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              transform: "translateY(-100%)",
+              // transition: "transform 0.3s ease-in-out",
+              // transform: "translateY(0%)",
               opacity: isMenuOpen ? 1 : 0,
               transition:
                 "transform 0.3s ease-in-out, opacity 0.3s ease-in-out",
@@ -119,17 +121,50 @@ const HeaderMobile = ({ path }: any) => {
             </Box>
             {/* Add your three links here */}
             <Link href={"/Serwis"} passHref>
-              <Button component="a" color="primary" onClick={handleMenuToggle}>
+              <Button
+                component="a"
+                style={{
+                  color: "black",
+                  fontSize: "18px",
+                  lineHeight: "21.29px",
+                  letterSpacing: "5%",
+                  marginTop: "20px",
+                }}
+                onClick={handleMenuToggle}
+              >
                 Serwis
               </Button>
             </Link>
             <Link href={"/Kontakt"} passHref>
-              <Button component="a" color="primary" onClick={handleMenuToggle}>
+              <Button
+                component="a"
+                color="primary"
+                style={{
+                  color: "black",
+                  fontSize: "18px",
+                  lineHeight: "21.29px",
+                  letterSpacing: "5%",
+                  marginTop: "20px",
+                }}
+                onClick={handleMenuToggle}
+              >
                 Kontakt
               </Button>
             </Link>
             <Link href={"/Realizacje"} passHref>
-              <Button component="a" color="primary" onClick={handleMenuToggle}>
+              <Button
+                component="a"
+                color="primary"
+                style={{
+                  color: "black",
+                  fontSize: "18px",
+                  lineHeight: "21.29px",
+                  letterSpacing: "5%",
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                }}
+                onClick={handleMenuToggle}
+              >
                 Realizacje
               </Button>
             </Link>

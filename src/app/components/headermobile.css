@@ -4,6 +4,7 @@
 
     width: 100vw;
     padding: 20px 0;
+    z-index: 4;
 }
 
 .logo-mobile-container {
@@ -11,4 +12,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 30px;
+}
+
+.footer-mobile-links {
+    text-decoration: none;
+    color: black;
 }

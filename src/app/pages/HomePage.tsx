@@ -18,7 +18,7 @@ const HomePage = () => {
   const isHomepage = pathname === "/" ? true : false;
   return (
     <Box className={"homepage-container"}>
-      {/* <PhotoSlider /> */}
+      <PhotoSlider />
 
       {/* <AboutUs /> */}
 

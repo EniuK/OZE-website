@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import type { Metadata } from "next";
 import PhotoSlider from "../homepage_components/PhotoSlider";
 import AboutUs from "../homepage_components/AboutUs";
@@ -14,11 +14,13 @@ export const metadata: Metadata = {
 };
 
 const HomePage = () => {
+  const isMobileView = useMediaQuery("(max-width:900px)");
+
   const pathname = usePathname();
   const isHomepage = pathname === "/" ? true : false;
   return (
     <Box className={"homepage-container"}>
-      <PhotoSlider />
+      {/* <PhotoSlider /> */}
 
       <AboutUs />
 
@@ -26,7 +28,7 @@ const HomePage = () => {
 
       <Offers />
 
-      {/* <Qualifications /> */}
+      <Qualifications />
     </Box>
   );
 };

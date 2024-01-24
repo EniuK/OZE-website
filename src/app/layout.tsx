@@ -9,6 +9,7 @@ import HomeMeta from "./MetaData";
 import { usePathname } from "next/navigation";
 import { Box, useMediaQuery } from "@mui/material";
 import HeaderMobile from "./components/HeaderMobile";
+import PhotoSlider from "./homepage_components/PhotoSlider";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const renderContent = useRenderContent();
@@ -37,7 +38,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           ) : (
             <Header path={pathname} />
           )}
-          <Box style={{ width: "100vw" }}>
+          <Box
+            style={{
+              width: "100vw",
+            }}
+          >
+            <PhotoSlider />
             <Box
               style={{
                 display: "flex",
@@ -45,6 +51,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                 justifyContent: "center",
                 alignItems: "center",
                 flexDirection: "column",
+                margin: "auto",
               }}
             >
               {/* <HomeMeta></HomeMeta> */}

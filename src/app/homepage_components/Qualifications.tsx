@@ -67,7 +67,7 @@ const Qualifications = () => {
                 <Box className={"qualif-shadow-box-container"}>
                   <Box className={"qualif-shadow-box"}>
                     {/* icon */}
-                    <Box>
+                    <Box className={"qualif-image-container "}>
                       <Image
                         src={"/shiled.svg"}
                         width={40}
@@ -78,7 +78,7 @@ const Qualifications = () => {
                     {/* divider */}
                     <Box className={"qualif-divider"} />
                     {/* text */}
-                    <Box>{e.name}</Box>
+                    <Box className={"qualif-text"}>{e.name}</Box>
                   </Box>
                 </Box>
               </Box>

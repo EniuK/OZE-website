@@ -1,6 +1,7 @@
 .qualif-container {
     width: 100%;
- 
+    margin-top: 100px;
+ margin-bottom: 100px;
 }
 
 .qualif-title {
@@ -71,6 +72,24 @@ margin-left: 10px;
     .qualif-item-container {
         display: flex;
         width: 100%;
-      
+       
+        justify-content: flex-start;
+    }
+    .qualif-map-container {
+        max-width: 100%;
+        padding-left: 20px
+
+    }
+
+    .qualif-text {
+       
+        font-size: 14px;
+        padding-right: 10px;
+    }
+    .qualif-shadow-box {
+        width: 300px;
+        height: auto;
+        padding-right: 10px;
+        justify-content: flex-start;
     }
   }

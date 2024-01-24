@@ -54,7 +54,14 @@ const Offers = () => {
       <Box className={"offers-map-container"}>
         {images.map((e: Image) => {
           return (
-            <Box key={e.name} style={{ padding: "30px" }}>
+            <Box
+              key={e.name}
+              style={{
+                padding: isMobileView ? "10px" : "30px",
+                maxWidth: isMobileView ? "140px" : "",
+                marginRight: isMobileView ? "10px" : "",
+              }}
+            >
               <Box>
                 <Image
                   src={e.url}

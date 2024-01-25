@@ -1,6 +1,6 @@
 import { Box, useMediaQuery } from "@mui/material";
 import type { Metadata } from "next";
-import PhotoSlider from "../homepage_components/PhotoSlider";
+// import PhotoSlider from "../homepage_components/PhotoSlider";
 import AboutUs from "../homepage_components/AboutUs";
 import ServicesHomePage from "../homepage_components/Services";
 import Offers from "../homepage_components/Offers";
@@ -18,6 +18,7 @@ const HomePage = () => {
 
   const pathname = usePathname();
   const isHomepage = pathname === "/" ? true : false;
+  console.log(isHomepage);
   return (
     <Box className={"homepage-container"}>
       {/* <PhotoSlider /> */}

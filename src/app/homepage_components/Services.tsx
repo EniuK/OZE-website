@@ -1,7 +1,7 @@
 import { Box, useMediaQuery } from "@mui/material";
 import ServicesIcons from "../components/ServicesIcons";
 import "./services.css";
-const ServicesHomePage = ({ home }: boolean) => {
+const ServicesHomePage = ({ home }: any) => {
   const isMobileView = useMediaQuery("(max-width:900px)");
 
   return (

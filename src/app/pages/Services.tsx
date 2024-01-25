@@ -87,7 +87,7 @@ const Services = () => {
         OFEROWANE PRZEZ NAS USŁUGI:
       </Box>
       <Box>
-        <ServicesIcons />
+        <ServicesIcons isHomePage={""} />
       </Box>
       <ServiceOffers offers={text} />
     </Box>

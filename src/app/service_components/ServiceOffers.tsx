@@ -9,11 +9,14 @@ type Offer = {
   img: string;
   urll: string;
 };
-const ServiceOffers = ({ offers }: Offer[]) => {
+const ServiceOffers = (offers: any) => {
+  console.log(offers);
+  const off = offers.offers;
+  console.log(off);
   return (
     <Box style={{ marginTop: "80px" }}>
       <Box>
-        {offers.map((e: any, idx: number) => {
+        {off.map((e: Offer, idx: number) => {
           return (
             <div
               key={idx * 10}
@@ -22,7 +25,7 @@ const ServiceOffers = ({ offers }: Offer[]) => {
               //   ref={elementRef}
               //   ref={elementRefs[element.id]}
             >
-              <section id={e.urll}>
+              <section id={e.urll} style={{ width: "100%" }}>
                 <Box style={{ paddingLeft: "40px" }}>{e.title}</Box>
                 <Box
                   className={"service-li-img-container"}
@@ -39,7 +42,14 @@ const ServiceOffers = ({ offers }: Offer[]) => {
                       })}
                     </ul>
                   </Box>
-                  <Box style={{ width: "50%" }}>
+                  <Box
+                    style={{
+                      width: "50%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
                     <Image src={e.img} width={400} height={300} alt={e.title} />
                   </Box>
                 </Box>

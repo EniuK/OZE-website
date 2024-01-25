@@ -39,7 +39,7 @@ const icons = [
     url: "pomiary",
   },
 ];
-const ServicesIcons = ({ isHomePage }: boolean) => {
+const ServicesIcons = ({ isHomePage }: any) => {
   const isMobileView = useMediaQuery("(max-width:900px)");
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {

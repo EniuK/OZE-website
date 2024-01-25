@@ -16,7 +16,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
 
   const isMobileView = useMediaQuery("(max-width:900px)");
-
+  console.log(pathname);
   return (
     <html lang="en">
       <head>
@@ -43,7 +43,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               width: "100vw",
             }}
           >
-            <PhotoSlider />
+            {pathname === "/" && <PhotoSlider />}
+
             <Box
               style={{
                 display: "flex",

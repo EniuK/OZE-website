@@ -74,7 +74,7 @@ const ServicesIcons = ({ isHomePage }: any) => {
           justifyContent: "space-evenly",
           alignItems: "center",
           overflow: "scroll",
-          paddingLeft: isMobileView ? "150px" : "",
+          paddingLeft: isMobileView ? "350px" : "",
         }}
       >
         {icons.map((e) => {
@@ -83,6 +83,7 @@ const ServicesIcons = ({ isHomePage }: any) => {
               key={e.text + 1}
               style={{
                 width: isMobileView ? "120px" : "152px",
+                minWidth: isMobileView ? "120px" : "",
                 height: "131px",
                 marginRight: isMobileView ? "20px" : "",
               }}

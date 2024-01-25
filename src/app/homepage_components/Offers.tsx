@@ -70,7 +70,15 @@ const Offers = () => {
                   alt={e.name}
                 />
               </Box>
-              <Box style={{ width: "100%", textAlign: "center" }}>{e.name}</Box>
+              <Box
+                style={{
+                  width: "100%",
+                  textAlign: "center",
+                  minWidth: isMobileView ? "140px" : "",
+                }}
+              >
+                {e.name}
+              </Box>
             </Box>
           );
         })}

@@ -90,6 +90,16 @@ margin-left: 10px;
         width: 300px;
         height: auto;
         padding-right: 10px;
+        margin: 5px;
         justify-content: flex-start;
+    }
+    .qualif-shadow-box-container{
+        margin: 5px 0;
+    }
+
+    .qualif-image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
   }

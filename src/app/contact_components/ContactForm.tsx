@@ -1,10 +1,12 @@
-import { Box, TextField, Button } from "@mui/material";
+import { Box, TextField, Button, useMediaQuery } from "@mui/material";
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-
+import "./contactform.css";
 const ContactForm = () => {
   const [messageSend, setMessageSend] = useState(false);
+  const isMobileView = useMediaQuery("(max-width:900px)");
+
   const sendEmail = (val: any) => {
     console.log(val);
   };
@@ -30,8 +32,14 @@ const ContactForm = () => {
     },
   });
   return (
-    <Box>
-      <form onSubmit={formik.handleSubmit}>
+    <Box className={"contact-form-container"}>
+      <Box
+        className={"form-header-text"}
+        style={isMobileView ? { width: "100%", textAlign: "center" } : {}}
+      >
+        <Box>ZNAJDŹ NAS LUB SKONTAKTUJ SIĘ Z NAMI</Box>
+      </Box>
+      <form className="contact-form-form" onSubmit={formik.handleSubmit}>
         <TextField
           label="Imię i nazwisko"
           fullWidth

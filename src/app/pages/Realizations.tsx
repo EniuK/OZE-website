@@ -1,5 +1,19 @@
 import { Box } from "@mui/material";
 import Galery from "../realizations_components/Galery";
+
+const galeryImages = [
+  {
+    original: "/galery/galery1.png",
+    thumbnail: "/galery/galery1.png",
+    description: "Opis zdjęcia 1",
+  },
+  {
+    original: "/galery/galery1.png",
+    thumbnail: "/galery/galery1.png",
+    description: "Opis zdjęcia 2",
+  },
+  // Dodaj kolejne obiekty dla kolejnych zdjęć
+];
 const Realizations = () => {
   return (
     <Box className={"realizations-container"}>
@@ -8,7 +22,7 @@ const Realizations = () => {
         <Box className={"realizations-subtitle"}></Box>
       </Box>
       <Box>
-        <Galery />
+        <Galery images={galeryImages} />
       </Box>
     </Box>
   );

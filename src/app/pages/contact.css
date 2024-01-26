@@ -12,5 +12,6 @@
 .contact-form-map {
     flex-direction: "column";
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 }

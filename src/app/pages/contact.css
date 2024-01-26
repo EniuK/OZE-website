@@ -9,4 +9,8 @@
     max-width: 900px;
     width: 100%;
 }    
+.contact-form-map {
+    flex-direction: "column";
+    flex-wrap: wrap;
+}
 }

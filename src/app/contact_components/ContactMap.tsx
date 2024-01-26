@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 // import { GoogleMap, Marker, LoadScript } from "@react-google-maps/api";
 import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
 
@@ -12,6 +12,8 @@ const MapContainerStyle = {
 };
 const position = { lat: 53.169307708740234, lng: 23.062885284423828 };
 const ContactMap = () => {
+  const isMobileView = useMediaQuery("(max-width:900px)");
+
   const key = "AIzaSyBSNzfsJFbBl3dCnEMgTxC172twvEPutGA";
   return (
     <Box>
@@ -19,7 +21,11 @@ const ContactMap = () => {
         <Map
           center={position}
           zoom={15}
-          style={{ width: "500px", height: "500px" }}
+          style={
+            isMobileView
+              ? { width: "300px", height: "200px" }
+              : { width: "500px", height: "500px" }
+          }
         >
           <Marker position={position} />
         </Map>

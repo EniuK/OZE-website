@@ -13,9 +13,9 @@ const Contact = () => {
         <Box>
           <ContactForm />
         </Box>
-        {/* <Box>
+        <Box>
           <ContactMap />
-        </Box> */}
+        </Box>
       </Box>
     </Box>
   );

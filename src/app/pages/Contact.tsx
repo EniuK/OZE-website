@@ -9,14 +9,14 @@ const Contact = () => {
       <Box className={"contact-introduction"}>
         <ContactIntroduction />
       </Box>
-      <Box className={"contact-form-map"}>
+      {/* <Box className={"contact-form-map"}>
         <Box>
           <ContactForm />
         </Box>
         <Box>
           <ContactMap />
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };

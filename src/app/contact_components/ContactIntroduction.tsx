@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import "./contactintroduction.css";
 
@@ -39,6 +39,8 @@ const team: Team[] = [
   },
 ];
 const ContactIntroduction = () => {
+  const isMobileView = useMediaQuery("(max-width:900px)");
+
   return (
     <Box className={"contact-intro-container"}>
       <Box className={"contact-title"}>KONTAKT</Box>
@@ -48,17 +50,53 @@ const ContactIntroduction = () => {
             <Box
               key={e.name}
               className={"contact-box-container"}
-              style={{
-                display: "flex",
-                flexDirection: idx === 1 ? "row-reverse" : "row",
-                textAlign: "left",
-                marginTop: "40px",
-              }}
+              style={
+                isMobileView
+                  ? {
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }
+                  : {
+                      display: "flex",
+                      flexDirection: idx === 1 ? "row-reverse" : "row",
+                      textAlign: "left",
+                      marginTop: "40px",
+                    }
+              }
             >
-              <Box style={{ margin: idx === 1 ? "0 0 0 40px" : "0 40px 0 0" }}>
-                <Image src={e.src} width={450} height={350} alt={e.name} />
+              <Box
+                style={
+                  isMobileView
+                    ? {
+                        width: "100%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        marginBottom: "50px",
+                      }
+                    : { margin: idx === 1 ? "0 0 0 40px" : "0 40px 0 0" }
+                }
+              >
+                <Image
+                  src={e.src}
+                  width={isMobileView ? 300 : 450}
+                  height={isMobileView ? 233 : 350}
+                  alt={e.name}
+                />
               </Box>
-              <Box style={{ textAlign: idx === 1 ? "left" : "right" }}>
+              <Box
+                style={
+                  isMobileView
+                    ? {
+                        width: "100%",
+                        textAlign: idx === 1 ? "right" : "left",
+                        padding: "0 10px",
+                      }
+                    : { textAlign: idx === 1 ? "left" : "right" }
+                }
+              >
                 <Box className={"contact-map-name"}>{e.name}</Box>
                 <br />
                 <Box className={"contact-map-text"}>{e.firstPar}</Box>

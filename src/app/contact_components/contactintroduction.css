@@ -29,3 +29,19 @@
     line-height: 25px;
 
 }
+
+@media (max-width: 900px){
+  .contact-intro-container {
+
+  }
+
+  .contact-box-container {
+   padding: 0;
+   margin-bottom: 50px;
+  }
+
+  .contact-title {
+    margin-left: 70px;
+    margin-top: 50px;
+  }
+}

@@ -6,4 +6,9 @@
     align-items: center;
     justify-content: space-between;
 }
-
+@media (max-width: 900px){
+    .service-map-container{ 
+        max-width: 900px;
+    }
+ }
+ 

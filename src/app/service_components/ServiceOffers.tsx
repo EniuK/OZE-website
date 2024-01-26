@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import "./serviceoffers.css";
 type Offer = {
@@ -10,11 +10,11 @@ type Offer = {
   urll: string;
 };
 const ServiceOffers = (offers: any) => {
-  console.log(offers);
+  const isMobileView = useMediaQuery("(max-width:900px)");
+
   const off = offers.offers;
-  console.log(off);
   return (
-    <Box style={{ marginTop: "80px" }}>
+    <Box style={{ marginTop: "80px", maxWidth: isMobileView ? "900px" : "" }}>
       <Box>
         {off.map((e: Offer, idx: number) => {
           return (
@@ -38,7 +38,7 @@ const ServiceOffers = (offers: any) => {
                   <Box style={{ width: "50%" }}>
                     <ul style={{ padding: 0, paddingRight: "40px" }}>
                       {e.li_items.map((el: any) => {
-                        return <li key={el}>{el}</li>;
+                        return <li key={el}>{el} </li>;
                       })}
                     </ul>
                   </Box>

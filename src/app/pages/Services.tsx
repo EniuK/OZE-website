@@ -1,6 +1,8 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
+import { useEffect, useState } from "react";
 import ServicesIcons from "../components/ServicesIcons";
 import ServiceOffers from "../service_components/ServiceOffers";
+import ServiceOffersMobile from "../service_components/ServiceOffersMobile";
 const text = [
   {
     title: "PROJEKTOWANIE",
@@ -81,15 +83,49 @@ const text = [
   },
 ];
 const Services = () => {
+  const isMobileView = useMediaQuery("(max-width:900px)");
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // Funkcja obsługująca zdarzenie zmiany rozmiaru okna
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  // Dodanie nasłuchiwania na zdarzenie zmiany rozmiaru okna po zamontowaniu komponentu
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    // Funkcja czyszcząca nasłuchiwanie po odmontowaniu komponentu
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Pusta tablica zależności oznacza, że efekt będzie działał tylko raz po zamontowaniu
+
   return (
     <Box>
-      <Box style={{ width: "100%", textAlign: "center" }}>
+      <Box
+        style={{
+          width: isMobileView ? windowWidth : "100%",
+          textAlign: "center",
+        }}
+      >
         OFEROWANE PRZEZ NAS USŁUGI:
       </Box>
-      <Box>
+      <Box
+        className={"hejka"}
+        style={{
+          maxWidth: isMobileView ? windowWidth : "",
+          overflow: isMobileView ? "scroll" : "",
+        }}
+      >
         <ServicesIcons isHomePage={""} />
       </Box>
-      <ServiceOffers offers={text} />
+
+      {isMobileView ? (
+        <ServiceOffersMobile offers={text} />
+      ) : (
+        <ServiceOffers offers={text} />
+      )}
     </Box>
   );
 };

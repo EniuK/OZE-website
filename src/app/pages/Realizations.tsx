@@ -3,16 +3,42 @@ import Galery from "../realizations_components/Galery";
 
 const galeryImages = [
   {
-    original: "/galery/galery1.png",
-    thumbnail: "/galery/galery1.png",
-    description: "Opis zdjęcia 1",
+    src: "/galery/galery1.png",
+    description: "Klimatyzacja",
   },
   {
-    original: "/galery/galery1.png",
-    thumbnail: "/galery/galery1.png",
-    description: "Opis zdjęcia 2",
+    src: "/galery/galery2.png",
+
+    description: "Przewody",
   },
-  // Dodaj kolejne obiekty dla kolejnych zdjęć
+  {
+    src: "/galery/galery3.png",
+    description: "Ciąg klimatyzacji",
+  },
+  {
+    src: "/galery/galery4.png",
+    description: "Przewody pod ziemią",
+  },
+  {
+    src: "/galery/galery5.png",
+    description: "Monta klimatyzacji",
+  },
+  {
+    src: "/galery/galery6.png",
+    description: "Klimatyzacja",
+  },
+  {
+    src: "/galery/galery7.png",
+    description: "Klimatyzacja",
+  },
+  {
+    src: "/galery/galery8.png",
+    description: "Monta klimatyzacji",
+  },
+  {
+    src: "/galery/galery9.png",
+    description: "Ciągi klimatyzacyjne",
+  },
 ];
 const Realizations = () => {
   return (

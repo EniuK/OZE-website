@@ -11,28 +11,92 @@ type Gallery = {
 const Galery = ({ images }: any) => {
   const isMobileView = useMediaQuery("(max-width:900px)");
 
-  const [currentImage, setCurrentImage] = useState(0);
-  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  const [highlightImg, setHighlightImg] = useState(0);
+  const [showImage, setShowImage] = useState(false);
 
-  const openLightbox = (index: number) => {
-    setCurrentImage(index);
-    setViewerIsOpen(true);
+  const setChosenImage = (idx: number) => {
+    setHighlightImg(idx);
+    setShowImage(true);
   };
-
-  const closeLightbox = () => {
-    setCurrentImage(0);
-    setViewerIsOpen(false);
+  const exitImage = () => {
+    setShowImage(false);
   };
+  const setNextImage = (imageIndex: number) => {
+    if (images[highlightImg + imageIndex] === undefined) {
+      switch (imageIndex) {
+        case -1:
+          setHighlightImg(images.length - 1);
+          console.log(images.length - 1);
+          break;
 
-  const gotoPrevious = () => {
-    setCurrentImage(currentImage - 1);
-  };
+        case 1:
+          setHighlightImg(0);
 
-  const gotoNext = () => {
-    setCurrentImage(currentImage + 1);
+          break;
+        default:
+          setHighlightImg(highlightImg + imageIndex);
+      }
+    }
+    if (images[highlightImg + imageIndex]) {
+      setHighlightImg(highlightImg + imageIndex);
+    }
   };
   return (
     <Box>
+      {showImage && (
+        <Box
+          style={{
+            position: "fixed",
+            top: "0",
+            width: "100vw",
+            height: "100vh",
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: "10",
+            flexDirection: "column",
+          }}
+        >
+          <Box style={{ width: "100%", backgroundColor: "red" }}>
+            <Image
+              src={"/galery/exit.svg"}
+              width={50}
+              height={50}
+              alt={"exit"}
+              onClick={() => exitImage()}
+            />
+          </Box>
+          <Box style={{ display: "flex", flexDirection: "row" }}>
+            <Box style={{}}>
+              <Image
+                src={"/galery/arrowLeft.svg"}
+                width={50}
+                height={50}
+                alt={"left"}
+                onClick={() => setNextImage(-1)}
+              />
+            </Box>
+            <Box>
+              <Image
+                src={images[highlightImg].src}
+                width={isMobileView ? 140 : 305}
+                height={isMobileView ? 145 : 310}
+                alt={"shown_img"}
+              />
+            </Box>
+            <Box style={{}}>
+              <Image
+                src={"/galery/arrowRight.svg"}
+                width={50}
+                height={50}
+                alt={"right"}
+                onClick={() => setNextImage(1)}
+              />
+            </Box>
+          </Box>
+        </Box>
+      )}
       <Box>
         <Box>NASZE REALIZACJE</Box>
         <Box>
@@ -53,24 +117,9 @@ const Galery = ({ images }: any) => {
               textAlign="center"
               maxWidth={isMobileView ? "140px" : "305px"}
               height={isMobileView ? "145px" : "310px"}
+              onClick={() => setChosenImage(idx)}
             >
-              <Box
-                // style={{
-                //   position: "absolute",
-                //   top: "50%",
-                //   left: "50%",
-                //   transform: "translate(-50%, -50%)",
-                //   padding: "10px",
-                //   background: "rgba(0, 0, 0, 0.7)",
-                //   color: "white",
-                // }}
-                // width="90%"
-                // height="90%"
-                // display={"flex"}
-                // justifyContent="center"
-                // alignItems={"center"}
-                className={styles.gallery_description_text}
-              >
+              <Box className={styles.gallery_description_text}>
                 <Typography variant="body1">{e.description}</Typography>
               </Box>
               <Image

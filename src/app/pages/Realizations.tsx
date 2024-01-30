@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import Galery from "../realizations_components/Galery";
-
+import "./realizations.css";
 const galeryImages = [
   {
     src: "/galery/galery1.png",
@@ -44,10 +44,17 @@ const Realizations = () => {
   return (
     <Box className={"realizations-container"}>
       <Box className={"realizations-text-container"}>
-        <Box className={"realizations-ttile"}>Nasze Realizacje</Box>
-        <Box className={"realizations-subtitle"}></Box>
+        <Box className={"realizations-ttile"}>NASZE REALIZACJE</Box>
+        <Box className={"realizations-subtitle"}>
+          Poniżej prezentujemy nasze najnowsze prace i osiągnięcia. Każdy
+          projekt to dla nas wyjątkowe wyzwanie, a nasza galeria jest
+          świadectwem naszej zdolności dostosowania się do różnorodnych potrzeb
+          klientów. Zachęcamy do zapoznania się i do kontaktu, jeśli jesteście
+          zainteresowani współpracą lub chcielibyście uzyskać więcej informacji
+          na temat naszych usług.
+        </Box>
       </Box>
-      <Box>
+      <Box style={{ marginBottom: "50px" }}>
         <Galery images={galeryImages} />
       </Box>
     </Box>

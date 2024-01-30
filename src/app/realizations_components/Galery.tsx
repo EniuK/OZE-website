@@ -88,7 +88,7 @@ const Galery = ({ images }: any) => {
           <Box style={{ display: "flex", flexDirection: "row", width: "50%" }}>
             <Box style={{ marginRight: "10%", marginTop: "25%" }}>
               <Image
-                src={"/galery/arrowLeft.svg"}
+                src={"/galery/arrowLeftLight.svg"}
                 width={50}
                 height={50}
                 alt={"left"}
@@ -106,7 +106,7 @@ const Galery = ({ images }: any) => {
             </Box>
             <Box style={{ marginLeft: "10%", marginTop: "25%" }}>
               <Image
-                src={"/galery/arrowRight.svg"}
+                src={"/galery/arrowRightLight.svg"}
                 width={50}
                 height={50}
                 alt={"right"}
@@ -117,17 +117,7 @@ const Galery = ({ images }: any) => {
           </Box>
         </Box>
       )}
-      <Box>
-        <Box>NASZE REALIZACJE</Box>
-        <Box>
-          Poniżej prezentujemy nasze najnowsze prace i osiągnięcia. Każdy
-          projekt to dla nas wyjątkowe wyzwanie, a nasza galeria jest
-          świadectwem naszej zdolności dostosowania się do różnorodnych potrzeb
-          klientów. Zachęcamy do zapoznania się i do kontaktu, jeśli jesteście
-          zainteresowani współpracą lub chcielibyście uzyskać więcej informacji
-          na temat naszych usług.
-        </Box>
-      </Box>
+
       <Box className={styles.gallery_container}>
         {images.map((e: Gallery, idx: number) => {
           return (
@@ -135,6 +125,7 @@ const Galery = ({ images }: any) => {
               key={e.description + idx}
               position="relative"
               textAlign="center"
+              margin={isMobileView ? "5px" : "30px"}
               maxWidth={isMobileView ? "140px" : "305px"}
               height={isMobileView ? "145px" : "310px"}
               onClick={() => setChosenImage(idx)}

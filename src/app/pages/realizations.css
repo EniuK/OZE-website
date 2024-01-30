@@ -1,0 +1,19 @@
+.realizations-ttile {
+    font-family: "Jura";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42.59px;
+    letter-spacing: 18%;
+    width: 100%;
+    text-align: center;
+}
+
+.realizations-subtitle {
+    font-family: "Zilla Slab";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    width: 100%;
+    padding: 50px 10%;
+    text-align: center;
+}

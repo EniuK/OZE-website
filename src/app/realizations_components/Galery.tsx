@@ -58,23 +58,42 @@ const Galery = ({ images }: any) => {
             flexDirection: "column",
           }}
         >
-          <Box style={{ width: "100%", backgroundColor: "red" }}>
-            <Image
-              src={"/galery/exit.svg"}
-              width={50}
-              height={50}
-              alt={"exit"}
-              onClick={() => exitImage()}
-            />
+          <Box
+            style={{
+              width: "100%",
+
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              style={{
+                width: "50%",
+                display: "flex",
+                justifyContent: "flex-end",
+                alignItems: "flex-end",
+              }}
+            >
+              <Image
+                src={"/galery/exit.svg"}
+                width={50}
+                height={50}
+                alt={"exit"}
+                onClick={() => exitImage()}
+                style={{ cursor: "pointer" }}
+              />
+            </Box>
           </Box>
-          <Box style={{ display: "flex", flexDirection: "row" }}>
-            <Box style={{}}>
+          <Box style={{ display: "flex", flexDirection: "row", width: "50%" }}>
+            <Box style={{ marginRight: "10%", marginTop: "25%" }}>
               <Image
                 src={"/galery/arrowLeft.svg"}
                 width={50}
                 height={50}
                 alt={"left"}
                 onClick={() => setNextImage(-1)}
+                style={{ cursor: "pointer" }}
               />
             </Box>
             <Box>
@@ -85,13 +104,14 @@ const Galery = ({ images }: any) => {
                 alt={"shown_img"}
               />
             </Box>
-            <Box style={{}}>
+            <Box style={{ marginLeft: "10%", marginTop: "25%" }}>
               <Image
                 src={"/galery/arrowRight.svg"}
                 width={50}
                 height={50}
                 alt={"right"}
                 onClick={() => setNextImage(1)}
+                style={{ cursor: "pointer" }}
               />
             </Box>
           </Box>

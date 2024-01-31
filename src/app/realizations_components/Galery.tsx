@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import styles from "./GalleryPage.module.css";
+import { FormatAlignJustify } from "@mui/icons-material";
 type Gallery = {
   src: string;
   description: string;
@@ -76,7 +77,7 @@ const Galery = ({ images }: any) => {
               }}
             >
               <Image
-                src={"/galery/exit.svg"}
+                src={"/galery/exitLight.svg"}
                 width={50}
                 height={50}
                 alt={"exit"}
@@ -85,8 +86,23 @@ const Galery = ({ images }: any) => {
               />
             </Box>
           </Box>
-          <Box style={{ display: "flex", flexDirection: "row", width: "50%" }}>
-            <Box style={{ marginRight: "10%", marginTop: "25%" }}>
+          <Box
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              width: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              style={{
+                width: "33%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <Image
                 src={"/galery/arrowLeftLight.svg"}
                 width={50}
@@ -99,12 +115,19 @@ const Galery = ({ images }: any) => {
             <Box>
               <Image
                 src={images[highlightImg].src}
-                width={isMobileView ? 140 : 305}
-                height={isMobileView ? 145 : 310}
+                width={isMobileView ? 200 : 500}
+                height={isMobileView ? 200 : 500}
                 alt={"shown_img"}
               />
             </Box>
-            <Box style={{ marginLeft: "10%", marginTop: "25%" }}>
+            <Box
+              style={{
+                width: "33%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <Image
                 src={"/galery/arrowRightLight.svg"}
                 width={50}

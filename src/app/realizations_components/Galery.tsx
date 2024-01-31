@@ -49,6 +49,7 @@ const Galery = ({ images }: any) => {
           style={{
             position: "fixed",
             top: "0",
+            left: "0",
             width: "100vw",
             height: "100vh",
             backgroundColor: "rgba(0, 0, 0, 0.7)",
@@ -70,7 +71,8 @@ const Galery = ({ images }: any) => {
           >
             <Box
               style={{
-                width: "50%",
+                width: isMobileView ? "90%" : "50%",
+                marginBottom: isMobileView ? "50px" : "50px",
                 display: "flex",
                 justifyContent: "flex-end",
                 alignItems: "flex-end",
@@ -93,6 +95,7 @@ const Galery = ({ images }: any) => {
               width: "100%",
               justifyContent: "center",
               alignItems: "center",
+              marginBottom: isMobileView ? "30%" : "",
             }}
           >
             <Box
@@ -115,8 +118,8 @@ const Galery = ({ images }: any) => {
             <Box>
               <Image
                 src={images[highlightImg].src}
-                width={isMobileView ? 200 : 500}
-                height={isMobileView ? 200 : 500}
+                width={isMobileView ? 250 : 500}
+                height={isMobileView ? 250 : 500}
                 alt={"shown_img"}
               />
             </Box>

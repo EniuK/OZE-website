@@ -86,20 +86,17 @@ const Services = () => {
   const isMobileView = useMediaQuery("(max-width:900px)");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  // Funkcja obsługująca zdarzenie zmiany rozmiaru okna
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
 
-  // Dodanie nasłuchiwania na zdarzenie zmiany rozmiaru okna po zamontowaniu komponentu
   useEffect(() => {
     window.addEventListener("resize", handleResize);
 
-    // Funkcja czyszcząca nasłuchiwanie po odmontowaniu komponentu
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // Pusta tablica zależności oznacza, że efekt będzie działał tylko raz po zamontowaniu
+  }, []);
 
   return (
     <Box>

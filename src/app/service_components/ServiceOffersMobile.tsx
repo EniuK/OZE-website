@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 type Offer = {
   title: string;
@@ -8,8 +9,22 @@ type Offer = {
   urll: string;
 };
 const ServiceOffersMobile = ({ offers }: any) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <Box style={{ width: "100%" }}>
+    <Box style={{ width: windowWidth }}>
       <Box>
         {offers.map((e: Offer, idx: number) => {
           return (

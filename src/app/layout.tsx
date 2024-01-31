@@ -40,6 +40,14 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           )}
           <Box
             style={{
+              backgroundColor: "rgba(202, 202, 202, 1)",
+              width: "100vw",
+              height: "0.5px",
+              marginBottom: isMobileView ? "" : "50px",
+            }}
+          />
+          <Box
+            style={{
               width: "100vw",
             }}
           >

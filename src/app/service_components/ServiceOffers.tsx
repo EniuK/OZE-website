@@ -26,7 +26,12 @@ const ServiceOffers = (offers: any) => {
               //   ref={elementRefs[element.id]}
             >
               <section id={e.urll} style={{ width: "100%" }}>
-                <Box style={{ paddingLeft: "40px" }}>{e.title}</Box>
+                <Box
+                  className={"service-offers-map-title"}
+                  style={{ paddingLeft: "40px" }}
+                >
+                  {e.title}
+                </Box>
                 <Box
                   className={"service-li-img-container"}
                   style={{
@@ -36,7 +41,13 @@ const ServiceOffers = (offers: any) => {
                   }}
                 >
                   <Box style={{ width: "50%" }}>
-                    <ul style={{ padding: 0, paddingRight: "40px" }}>
+                    <ul
+                      style={{
+                        padding: 0,
+                        paddingRight: "40px",
+                        paddingLeft: "40px",
+                      }}
+                    >
                       {e.li_items.map((el: any) => {
                         return <li key={el}>{el} </li>;
                       })}
@@ -45,6 +56,7 @@ const ServiceOffers = (offers: any) => {
                   <Box
                     style={{
                       width: "50%",
+
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",

@@ -6,6 +6,13 @@
     align-items: center;
     justify-content: space-between;
 }
+.service-offers-map-title {
+    padding-top: 100px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42.59px;
+    letter-spacing: 18%;
+}
 @media (max-width: 900px){
     .service-map-container{ 
         max-width: 900px;

@@ -1,7 +1,7 @@
 import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-
+import "./serviceicons.css";
 const icons = [
   {
     imgsrc: "/book.svg",
@@ -74,6 +74,8 @@ const ServicesIcons = ({ isHomePage }: any) => {
           justifyContent: "space-evenly",
           alignItems: "center",
           overflow: "scroll",
+          width: "100%",
+          // backgroundColor: "red",
           paddingLeft: isMobileView ? "350px" : "",
         }}
       >
@@ -82,33 +84,43 @@ const ServicesIcons = ({ isHomePage }: any) => {
             <Box
               key={e.text + 1}
               style={{
+                marginTop: "20px",
                 width: isMobileView ? "120px" : "152px",
                 minWidth: isMobileView ? "120px" : "",
                 height: "131px",
                 marginRight: isMobileView ? "20px" : "",
               }}
+              className={"service-icon-container"}
             >
-              <Box
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
+              <Link
+                href={isHomePage ? "/Serwis" : `/Serwis#${e.url}`}
+                onClick={isHomePage ? () => console.log("") : handleScroll}
+                style={{ textDecoration: "none", color: "black" }}
+                className={"service-icons-link-styled"}
               >
-                <Link
-                  href={isHomePage ? "/Serwis" : `/Serwis#${e.url}`}
-                  onClick={isHomePage ? () => console.log("") : handleScroll}
+                <Box
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
                 >
                   <Image
+                    className={"service-icon"}
                     src={e.imgsrc}
                     alt={e.text}
                     width={isMobileView ? 70 : 100}
                     height={isMobileView ? 70 : 100}
                   />
-                </Link>
-              </Box>
-              <Box style={{ width: "100%", textAlign: "center" }}>{e.text}</Box>
+                </Box>
+                <Box
+                  style={{ width: "100%", textAlign: "center" }}
+                  // className={"service-icons-text"}
+                >
+                  {e.text}
+                </Box>
+              </Link>
             </Box>
           );
         })}

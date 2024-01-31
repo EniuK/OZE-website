@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 import "./footer.css";
 import FooterLinks from "./FooterLinks";
 interface Logo {
@@ -7,6 +8,7 @@ interface Logo {
   width: number;
   height: number;
   alt: string;
+  href: string;
 }
 interface SocialLinks {
   path: string;
@@ -21,24 +23,28 @@ const logos: Logo[] = [
     width: 300,
     height: 30,
     alt: "Thesslagreen_logo",
+    href: "https://thesslagreen.com/",
   },
   {
     path: "/Panasonic_logo.png",
     width: 194,
     height: 30,
     alt: "Panasonic_logo",
+    href: "https://www.panasonic.com/pl/",
   },
   {
     path: "/Bezprzewodu_logo.png",
     width: 262,
     height: 37.5,
     alt: "Bezprzewodu_logo",
+    href: "https://bezprzewodu.pl/",
   },
   {
     path: "/Daikin_logo.png",
     width: 181,
     height: 37,
     alt: "Daikin_logo",
+    href: "https://www.daikin.pl/pl_pl/klienci.html",
   },
 ];
 
@@ -74,12 +80,14 @@ const Footer = ({ path }: any) => {
           {logos.map((e: Logo) => {
             return (
               <Box key={e.alt} className={"footer-logos-item"}>
-                <Image
-                  src={e.path}
-                  width={e.width}
-                  height={e.height}
-                  alt={e.alt}
-                ></Image>
+                <Link href={e.href} target={"_blank"}>
+                  <Image
+                    src={e.path}
+                    width={e.width}
+                    height={e.height}
+                    alt={e.alt}
+                  />
+                </Link>
               </Box>
             );
           })}

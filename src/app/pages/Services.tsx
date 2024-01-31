@@ -107,6 +107,11 @@ const Services = () => {
         style={{
           width: isMobileView ? windowWidth : "100%",
           textAlign: "center",
+          fontWeight: "700",
+          fontSize: "36px",
+          lineHeight: "42.59px",
+          letterSpacing: "18%",
+          marginBottom: "50px",
         }}
       >
         OFEROWANE PRZEZ NAS USŁUGI:

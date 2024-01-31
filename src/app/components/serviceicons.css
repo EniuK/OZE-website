@@ -1,0 +1,27 @@
+.service-icon-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+    font-weight: 500;
+}
+.service-icons-text{
+    font-family: "Jura";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21.29px;
+    letter-spacing: 5%;
+}
+
+.service-icons-link-styled:hover {
+    font-weight: 700;
+    letter-spacing: 10%;
+
+}
+
+.service-icons-link-styled {
+    font-family: "Jura";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21.29px;
+    letter-spacing: 5%;
+}

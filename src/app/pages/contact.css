@@ -3,6 +3,7 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
+    margin-top: 150px;
 }
 @media (max-width: 900px){
 .contact-container {
@@ -13,5 +14,6 @@
     flex-direction: "column";
     flex-wrap: wrap;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 }

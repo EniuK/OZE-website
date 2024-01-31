@@ -112,10 +112,13 @@ const Services = () => {
           lineHeight: "42.59px",
           letterSpacing: "18%",
           marginBottom: "50px",
+          marginTop: "50px",
         }}
       >
         OFEROWANE PRZEZ NAS USŁUGI:
       </Box>
+      <Box marginLeft={"50px"}>{windowWidth}</Box>
+
       <Box
         className={"hejka"}
         style={{

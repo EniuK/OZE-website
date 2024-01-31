@@ -117,10 +117,8 @@ const Services = () => {
       >
         OFEROWANE PRZEZ NAS USŁUGI:
       </Box>
-      <Box marginLeft={"50px"}>{windowWidth}</Box>
 
       <Box
-        className={"hejka"}
         style={{
           maxWidth: isMobileView ? windowWidth : "",
           overflow: isMobileView ? "scroll" : "",

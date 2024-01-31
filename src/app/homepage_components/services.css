@@ -27,7 +27,7 @@
 @media (max-width: 900px) {
     .services-container {
         overflow: scroll;
-       
+       width: 100%;
     }
 
     .services-title {

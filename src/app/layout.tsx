@@ -43,7 +43,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               backgroundColor: "rgba(202, 202, 202, 1)",
               width: "100vw",
               height: "0.5px",
-              marginBottom: isMobileView ? "" : "50px",
+              marginBottom: pathname === "/" ? "" : "50px",
             }}
           />
           <Box
@@ -63,7 +63,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                 margin: "auto",
               }}
             >
-              {/* <HomeMeta></HomeMeta> */}
               {renderContent || children}
             </Box>
           </Box>

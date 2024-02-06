@@ -24,7 +24,7 @@ const ServiceOffersMobile = ({ offers }: any) => {
   }, []);
 
   return (
-    <Box style={{ width: windowWidth }}>
+    <Box style={{ width: "100vw" }}>
       <Box>
         {offers.map((e: Offer, idx: number) => {
           return (

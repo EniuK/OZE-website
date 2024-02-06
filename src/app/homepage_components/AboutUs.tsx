@@ -8,6 +8,13 @@ const AboutUs = () => {
   return (
     //
     <Box className={"aboutus-container"}>
+      <Image
+        src={"/gradients/gradient1home.png"}
+        width={isMobileView ? 360 : 773}
+        height={isMobileView ? 360 : 695}
+        alt={"gradient"}
+        style={{ position: "absolute", zIndex: "-1" }}
+      />
       <Box className={"aboutus-text-container"}>
         <Box className={"aboutus-title"}>O NAS</Box>
         <Box style={{ width: "100%" }}>

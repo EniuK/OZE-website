@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import "./qualifications.css";
 type qualification = {
@@ -49,8 +49,18 @@ const qualificaions: qualification[] = [
   },
 ];
 const Qualifications = () => {
+  const isMobileView = useMediaQuery("(max-width:900px)");
+
   return (
     <Box className={"qualif-container"}>
+      <Image
+        src={"/gradients/gradient2home.png"}
+        width={isMobileView ? 360 : 900}
+        height={isMobileView ? 360 : 1000}
+        alt={"gradient2"}
+        style={{ position: "absolute", zIndex: "-1" }}
+      />
+
       <Box className={"qualif-title"}>KWALIFIKACJE</Box>
       <Box className={"qualif-subtitle"}>
         Dysponujemy licznymi kwalifikacjami, które są gwarancją wysokiej jakości

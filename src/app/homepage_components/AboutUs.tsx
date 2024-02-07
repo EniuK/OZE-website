@@ -1,12 +1,21 @@
 import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import "./aboutus.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const AboutUs = () => {
   const isMobileView = useMediaQuery("(max-width:900px)");
+  useEffect(() => {
+    AOS.init();
+
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
 
   return (
-    //
     <Box className={"aboutus-container"}>
       <Image
         src={"/gradients/gradient1home.png"}
@@ -15,7 +24,13 @@ const AboutUs = () => {
         alt={"gradient"}
         style={{ position: "absolute", zIndex: "-1" }}
       />
-      <Box className={"aboutus-text-container"}>
+      <Box
+        className={"aboutus-text-container"}
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-anchor-placement="center-bottom"
+        data-aos-delay="500"
+      >
         <Box className={"aboutus-title"}>O NAS</Box>
         <Box style={{ width: "100%" }}>
           <Box className={"aboutus-subtitle1 sub"}>
@@ -40,7 +55,13 @@ const AboutUs = () => {
           </Box>
         </Box>
       </Box>
-      <Box className={"aboutus-img-container"}>
+      <Box
+        className={"aboutus-img-container"}
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-anchor-placement="center-bottom"
+        data-aos-delay="500"
+      >
         <Image
           src="/owners.png"
           alt="Owners"

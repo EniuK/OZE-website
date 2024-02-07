@@ -6,7 +6,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding-left: 10em;
-
+margin: 250px 0;
 }
 
 .aboutus-text-container {
@@ -58,6 +58,7 @@ align-items: center;
     width: 100%;
   
     padding-left: 1em;
+    margin: 50px 0;
 }
 
 .aboutus-img-container {

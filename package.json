@@ -21,6 +21,7 @@
     "@react-email/render": "^0.0.12",
     "@react-google-maps/api": "^2.19.2",
     "@vis.gl/react-google-maps": "^0.5.0",
+    "aos": "^2.3.4",
     "formik": "^2.4.5",
     "next": "14.0.4",
     "nodemailer": "^6.9.8",

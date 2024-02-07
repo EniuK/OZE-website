@@ -63,6 +63,7 @@ const ContactIntroduction = () => {
                       flexDirection: idx === 1 ? "row-reverse" : "row",
                       textAlign: "left",
                       marginTop: "40px",
+                      marginBottom: "200px",
                     }
               }
             >
@@ -111,6 +112,15 @@ const ContactIntroduction = () => {
                   TELEFON:{e.tel}
                 </Box>
               </Box>
+              {idx === 0 && (
+                <Image
+                  src={"/gradients/gradient1contact.png"}
+                  width={isMobileView ? 360 : 900}
+                  height={isMobileView ? 360 : 1000}
+                  alt={"gradient2"}
+                  style={{ position: "absolute", zIndex: "-1" }}
+                />
+              )}
             </Box>
           );
         })}

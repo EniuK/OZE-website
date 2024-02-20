@@ -28,8 +28,8 @@ const AboutUs = () => {
         className={"aboutus-text-container"}
         data-aos="fade-up"
         data-aos-duration="1000"
-        data-aos-anchor-placement="center-bottom"
-        data-aos-delay="500"
+        data-aos-anchor-placement="top-center"
+        // data-aos-delay="500"
       >
         <Box className={"aboutus-title"}>O NAS</Box>
         <Box style={{ width: "100%" }}>
@@ -59,8 +59,8 @@ const AboutUs = () => {
         className={"aboutus-img-container"}
         data-aos="fade-down"
         data-aos-duration="1000"
-        data-aos-anchor-placement="center-bottom"
-        data-aos-delay="500"
+        data-aos-anchor-placement="top-center"
+        // data-aos-delay="500"
       >
         <Image
           src="/owners.png"

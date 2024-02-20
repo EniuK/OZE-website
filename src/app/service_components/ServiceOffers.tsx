@@ -28,7 +28,7 @@ const ServiceOffers = (offers: any) => {
               <section id={e.urll} style={{ width: "100%" }}>
                 <Box
                   className={"service-offers-map-title"}
-                  style={{ paddingLeft: "40px" }}
+                  style={{ padding: "40px 0 40px 40px" }}
                 >
                   {e.title}
                 </Box>
@@ -37,32 +37,51 @@ const ServiceOffers = (offers: any) => {
                   style={{
                     display: "flex",
                     flexDirection: idx % 2 === 0 ? "row" : "row-reverse",
-                    padding: "40px",
                   }}
                 >
-                  <Box style={{ width: "50%" }}>
-                    <ul
-                      style={{
-                        padding: 0,
-                        paddingRight: "40px",
-                        paddingLeft: "40px",
-                      }}
-                    >
-                      {e.li_items.map((el: any) => {
-                        return <li key={el}>{el} </li>;
-                      })}
-                    </ul>
-                  </Box>
                   <Box
                     style={{
-                      width: "50%",
-
+                      width: "50vw",
+                      height: "500px",
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
                     }}
                   >
-                    <Image src={e.img} width={400} height={300} alt={e.title} />
+                    <ul
+                      style={{
+                        padding: "0 40px",
+                      }}
+                    >
+                      {e.li_items.map((el: any) => {
+                        return (
+                          <li
+                            key={el}
+                            style={{
+                              fontSize: "25px",
+                            }}
+                          >
+                            {el}{" "}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </Box>
+                  <Box
+                    style={{
+                      width: "50vw",
+                      height: "500px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    sx={{
+                      backgroundImage: `url(${e.img})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  >
+                    {/* <Image src={e.img} width={400} height={300} alt={e.title} /> */}
                   </Box>
                 </Box>
               </section>

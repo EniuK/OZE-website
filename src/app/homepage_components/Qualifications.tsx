@@ -1,6 +1,12 @@
 import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import "./qualifications.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
 type qualification = {
   name: string;
 };
@@ -70,30 +76,43 @@ const Qualifications = () => {
         naszych uprawnień:
       </Box>
       <Box>
-        <Box className={"qualif-map-container"}>
-          {qualificaions.map((e: qualification) => {
-            return (
-              <Box key={e.name} className={"qualif-item-container"}>
-                <Box className={"qualif-shadow-box-container"}>
-                  <Box className={"qualif-shadow-box"}>
-                    {/* icon */}
-                    <Box className={"qualif-image-container "}>
-                      <Image
-                        src={"/shiled.svg"}
-                        width={40}
-                        height={40}
-                        alt={"shiled"}
-                      />
+        <Box>
+          <Swiper
+            slidesPerView={3.3}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {qualificaions.map((e: qualification) => {
+              return (
+                <SwiperSlide
+                  key={e.name}
+                  style={{ height: "300px", marginRight: "50px" }}
+                >
+                  <Box className={"qualif-shadow-box-container"}>
+                    <Box className={"qualif-shadow-box"}>
+                      {/* icon */}
+                      <Box className={"qualif-image-container "}>
+                        <Image
+                          src={"/shiled.svg"}
+                          width={40}
+                          height={40}
+                          alt={"shiled"}
+                        />
+                      </Box>
+                      {/* divider */}
+                      <Box className={"qualif-divider"} />
+                      {/* text */}
+                      <Box className={"qualif-text"}>{e.name}</Box>
                     </Box>
-                    {/* divider */}
-                    <Box className={"qualif-divider"} />
-                    {/* text */}
-                    <Box className={"qualif-text"}>{e.name}</Box>
                   </Box>
-                </Box>
-              </Box>
-            );
-          })}
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </Box>
       </Box>
     </Box>

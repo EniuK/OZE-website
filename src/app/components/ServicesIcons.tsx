@@ -1,7 +1,10 @@
 import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 import "./serviceicons.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const icons = [
   {
     imgsrc: "/book.svg",
@@ -40,6 +43,13 @@ const icons = [
   },
 ];
 const ServicesIcons = ({ isHomePage }: any) => {
+  useEffect(() => {
+    AOS.init();
+
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
   const isMobileView = useMediaQuery("(max-width:900px)");
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -78,6 +88,10 @@ const ServicesIcons = ({ isHomePage }: any) => {
           // backgroundColor: "red",
           paddingLeft: isMobileView ? "350px" : "",
         }}
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-anchor-placement="center-bottom"
+        data-aos-delay="500"
       >
         {icons.map((e) => {
           return (
